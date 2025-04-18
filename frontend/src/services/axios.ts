@@ -2,7 +2,7 @@ import axios, { InternalAxiosRequestConfig, AxiosError } from "axios";
 
 // Create an axios instance
 const instance = axios.create({
-  baseURL: "http://18.222.161.63/api/",
+  baseURL: "https://18.222.161.63/api/",
 });
 
 let isRefreshing = false;
