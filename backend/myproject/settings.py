@@ -119,11 +119,11 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # URL of your frontend (React)
+    'https://moneytrackrz.netlify.app',  # URL of your frontend (React)
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173',  # <-- This matches your frontend (likely using Vite)
+    'https://moneytrackrz.netlify.app',  # <-- This matches your frontend (likely using Vite)
 ]
 
 # Internationalization
