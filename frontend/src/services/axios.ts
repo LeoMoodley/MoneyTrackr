@@ -2,7 +2,7 @@ import axios, { InternalAxiosRequestConfig, AxiosError } from "axios";
 
 // Create an axios instance
 const instance = axios.create({
-  baseURL: "https://moneytrackrz.netlify.app/api/",
+  baseURL: "http://18.222.161.63:8000/api/",
 });
 
 let isRefreshing = false;
