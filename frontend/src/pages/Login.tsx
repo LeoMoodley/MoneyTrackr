@@ -23,7 +23,7 @@ function Login() {
         return;
       }
 
-      const response = await fetch('http://18.222.161.63:8000/api/register/', {
+      const response = await fetch('https://3.15.229.131:8000/api/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function Login() {
         alert(data.error || 'Something went wrong');
       }
     } else if(formType == "login") {
-      const response = await fetch('http://18.222.161.63:8000/api/token/', {
+      const response = await fetch('https://3.15.229.131:8000/api/token/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function Login() {
         alert('Login failed');
       }
     } else if(formType == "reset") {
-      const response = await fetch('http://18.222.161.63:8000/api/password-reset/', {
+      const response = await fetch('https://3.15.229.131:8000/api/password-reset/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
