@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)h@m%x=dp@6f00i3sr+z1dcr1=yd87$vi0oi$y!oeyofwqs0=i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["18.222.161.63", "moneytrackrz.netlify.app", "localhost"]
+ALLOWED_HOSTS = ["3.15.229.131", "moneytrackrz.netlify.app", "localhost"]
 
 
 # Application definition
