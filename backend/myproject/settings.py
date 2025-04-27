@@ -120,10 +120,12 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     'https://moneytrackr.ca',  # URL of your frontend (React)
+    'https://www.moneytrackr.ca',  # URL of your frontend (React)
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://moneytrackr.ca',  # <-- This matches your frontend (likely using Vite)
+    'https://www.moneytrackr.ca',  # URL of your frontend (React)
 ]
 
 # Internationalization
