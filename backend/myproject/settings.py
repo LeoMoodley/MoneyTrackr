@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)h@m%x=dp@6f00i3sr+z1dcr1=yd87$vi0oi$y!oeyofwqs0=i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["3.15.229.131", "moneytrackrz.netlify.app", "localhost"]
+ALLOWED_HOSTS = ["3.15.229.131", "moneytrackr.ca", "localhost"]
 
 
 # Application definition
@@ -119,11 +119,11 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'https://moneytrackrz.netlify.app',  # URL of your frontend (React)
+    'https://moneytrackr.ca',  # URL of your frontend (React)
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://moneytrackrz.netlify.app',  # <-- This matches your frontend (likely using Vite)
+    'https://moneytrackr.ca',  # <-- This matches your frontend (likely using Vite)
 ]
 
 # Internationalization
