@@ -118,6 +118,14 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
 
+CORS_ALLOW_HEADERS = [
+    "origin",
+    "content-type",
+    "accept",
+    "authorization",
+    "x-csrftoken",
+]
+
 CORS_ALLOWED_ORIGINS = [
     'https://moneytrackr.ca',  # URL of your frontend (React)
     'https://www.moneytrackr.ca',  # URL of your frontend (React)
