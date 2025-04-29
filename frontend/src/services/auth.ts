@@ -2,6 +2,7 @@ export const refreshToken = async () => {
     const refresh = localStorage.getItem("refresh_token");
 
     const response = await fetch("https://api.moneytrackr.ca/api/token/refresh/", {
+        mode: "no-cors",
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh }),
