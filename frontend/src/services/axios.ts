@@ -13,7 +13,7 @@ const refreshToken = async (): Promise<string | null> => {
     const refresh = localStorage.getItem("refresh_token");
     if (!refresh) throw new Error("No refresh token available");
 
-    const response = await axios.post("https://moneytrackr.ca/api/token/refresh/", {
+    const response = await axios.post("https://api.moneytrackr.ca/api/token/refresh/", {
       refresh,
     });
 
