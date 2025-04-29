@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)h@m%x=dp@6f00i3sr+z1dcr1=yd87$vi0oi$y!oeyofwqs0=i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["3.15.229.131", "moneytrackr.ca", "localhost"]
+ALLOWED_HOSTS = ["3.15.229.131", "moneytrackr.ca", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -123,6 +123,10 @@ CORS_ALLOWED_ORIGINS = [
     'https://www.moneytrackr.ca',  # URL of your frontend (React)
     'http://moneytrackr.ca',
     'http://www.moneytrackr.ca',
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.moneytrackr\.ca$",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
