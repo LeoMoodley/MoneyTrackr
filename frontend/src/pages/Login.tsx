@@ -24,7 +24,6 @@ function Login() {
       }
 
       const response = await fetch('https://api.moneytrackr.ca/api/register/', {
-        mode: "no-cors",
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +49,6 @@ function Login() {
       }
     } else if(formType == "login") {
       const response = await fetch('https://api.moneytrackr.ca/api/token/', {
-        mode: "no-cors",
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +69,6 @@ function Login() {
       }
     } else if(formType == "reset") {
       const response = await fetch('https://api.moneytrackr.ca/api/password-reset/', {
-        mode: "no-cors",
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
