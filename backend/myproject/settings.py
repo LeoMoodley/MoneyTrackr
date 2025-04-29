@@ -137,6 +137,8 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.moneytrackr\.ca$",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 CSRF_TRUSTED_ORIGINS = [
     'https://moneytrackr.ca',  # <-- This matches your frontend (likely using Vite)
     'https://www.moneytrackr.ca',  # URL of your frontend (React)
