@@ -26,8 +26,11 @@ def is_valid_email(email):
     pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
     return re.match(pattern, email) is not None
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 def register_user(request):
+    if request.method == 'OPTIONS':
+        return Response(status=200)
+    
     if request.method == 'POST' and is_valid_email(request.data.get('email', '')):
         # Get data from the request
         data = request.data
@@ -77,9 +80,12 @@ class UserFinancialDataView(APIView):
         else:
             return Response({"detail": "Email not found."}, status=404)
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 @permission_classes([IsAuthenticated])  # Ensure the user is authenticated
 def create_transaction(request):
+    if request.method == 'OPTIONS':
+        return Response(status=200)
+    
     try:
         # Get the user's email
         user_email = request.user.email
@@ -119,9 +125,12 @@ def create_transaction(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 @permission_classes([IsAuthenticated])  # Ensure the user is authenticated
 def reset_month(request):
+    if request.method == 'OPTIONS':
+        return Response(status=200)
+    
     try:
         # Get the user's email
         user_email = request.user.email
@@ -135,9 +144,12 @@ def reset_month(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 @permission_classes([IsAuthenticated])  # Ensure the user is authenticated
 def change_budget(request):
+    if request.method == 'OPTIONS':
+        return Response(status=200)
+    
     try:
         # Get the user's email
         user_email = request.user.email
@@ -152,9 +164,12 @@ def change_budget(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-@api_view(['POST'])
+@api_view(['POST', 'OPTIONS'])
 @permission_classes([IsAuthenticated])  # Ensure the user is authenticated
 def remove_budget(request):
+    if request.method == 'OPTIONS':
+        return Response(status=200)
+    
     try:
         # Get the user's email
         user_email = request.user.email
@@ -177,7 +192,7 @@ class SendResetEmailAPI(APIView):
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             token = default_token_generator.make_token(user)
 
-            reset_link = f"http://localhost:5173/reset-password?uid={uid}&token={token}"
+            reset_link = f"https://www.moneytrackr.ca/reset-password?uid={uid}&token={token}"
 
             send_mail(
                 subject='Reset your password',
