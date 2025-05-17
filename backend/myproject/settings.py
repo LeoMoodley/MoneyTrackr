@@ -175,8 +175,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'yiolop89@gmail.com'
 EMAIL_HOST_PASSWORD = 'hctu ekkd oilh ucoh'  # Use an App Password instead of your main Gmail password
 
-SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = False
+# SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Enable HTTP Strict Transport Security (HSTS) for 1 year
 SECURE_HSTS_SECONDS = 31536000  # 1 year
