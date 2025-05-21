@@ -4,7 +4,8 @@ import PrivateRoute from './components/PrivateRoute';
 
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import History from './pages/History'
+import History from './pages/History';
+import ResetPassword from './pages/ResetPassword';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,6 +24,12 @@ function App() {
           path="/login"
           element={
             isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />
+          }
+        />
+        <Route
+          path="/reset-password"
+          element={
+            <ResetPassword />
           }
         />
 
