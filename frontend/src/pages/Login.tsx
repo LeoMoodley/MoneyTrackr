@@ -77,6 +77,8 @@ function Login() {
           email: formData.email
         }),
       });
+
+      alert("If an account with that email exists, a password reset link has been sent. Please check your inbox and spam folder.")
     }
   };
 
