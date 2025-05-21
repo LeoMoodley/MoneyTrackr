@@ -18,7 +18,7 @@ export default function ResetPassword() {
       return;
     }
 
-    const response = await fetch('http://localhost:8000/api/password-reset/done/', {
+    const response = await fetch('https://api.moneytrackr.ca/api/password-reset/done/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ uid, token, password }),
