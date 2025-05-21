@@ -594,7 +594,7 @@ function Dashboard() {
                       // Add logout logic here
                       localStorage.removeItem('access_token');
                       localStorage.removeItem('refresh_token');
-                      navigate("/history");
+                      navigate("/login");
                       // window.location.reload();
                       // handleLogout();
                     }}
