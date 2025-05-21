@@ -1,6 +1,6 @@
 [build]
   command = "CI='' npm run build"
-  publish = "frontend/dist"
+  publish = "/dist"
   base ="frontend/"
 
 [[redirects]]
