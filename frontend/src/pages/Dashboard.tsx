@@ -594,7 +594,8 @@ function Dashboard() {
                       // Add logout logic here
                       localStorage.removeItem('access_token');
                       localStorage.removeItem('refresh_token');
-                      window.location.reload();
+                      navigate("/history");
+                      // window.location.reload();
                       // handleLogout();
                     }}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-gray-50 w-full text-left"
